@@ -1,5 +1,7 @@
 import Image from "next/image"
 import { useState } from "react"
+import styles from '@/styles/CarouselPage.module.css';
+
 
 
 export default function Carousel() {
@@ -25,7 +27,7 @@ export default function Carousel() {
     }
     return(
         <>
-            <div style={{
+            <div className={styles.body} style={{
                     backgroundImage:"url(/carousel-images/" + img + ".jpg)",
                     backgroundSize: 'cover',
                     backgroundRepeat: "no-repeat",
@@ -33,6 +35,7 @@ export default function Carousel() {
                     height: 300
             }}>
                 <Image
+                    className={styles.left__arrow}
                     src={"/icons/leftArrow.png"}
                     alt={"/icons/leftArrow.png"}
                     width={100}
@@ -41,6 +44,7 @@ export default function Carousel() {
                 />
                 
                 <Image
+                    className={styles.right__arrow}
                     src={"/icons/rightArrow.png"}
                     alt={"/icons/rightArrow.png"}
                     width={100}

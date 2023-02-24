@@ -1,5 +1,7 @@
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import styles from '@/styles/useEffectOne.module.css';
+
 
 export default function useEffectOne() {
 
@@ -12,11 +14,11 @@ export default function useEffectOne() {
 
     return(
         <>
-            <Link href="/">Home</Link>
-            <div>
+            <Link className= {styles.home__button} href="/">Home</Link>
+            <div className={styles.body}>
                 useEffectOne
             </div>
-            <div>
+            <div className={styles.body}>
                 {number}
             </div>
         </>

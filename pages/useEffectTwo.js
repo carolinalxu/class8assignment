@@ -1,5 +1,7 @@
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import styles from '@/styles/useEffectTwo.module.css';
+
 
 
 export default function useEffectTwo() {
@@ -13,7 +15,7 @@ export default function useEffectTwo() {
 
     return(
         <>
-        <Link href="/">Home</Link>
+        <Link className= {styles.home__button} href="/">Home</Link>
         <div>
             useEffectTwo
         </div>
